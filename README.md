@@ -72,7 +72,7 @@ Pascal Monasse <pascal.monasse@enpc.fr>
 Citations
 ------------
 
-If you used our code in your publication, please cite the following
+If you used our code in your publication, please cite the following:
 
 [1] Yohann Salaun, Renaud Marlet, and Pascal Monasse, [Multiscale line segment detector for robust and accurate SfM](https://drive.google.com/file/d/0B96kyL2SBsmzOFY0b2hnSm54eTQ/view),  ICPR 2016
 
