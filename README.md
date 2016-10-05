@@ -7,7 +7,8 @@ Introduction
 ------------
 
 
-This code is part of the following publication and was subject to peer review:
+This code is linked of the following publication, which was subject to peer review: 
+
 "Multiscale line segment detector for robust and accurate SfM" by Yohann Salaun, Renaud Marlet, and Pascal Monasse ICPR 2016
 
 It generalizes the classical LSD algorithm avoiding oversegmentation and bad detection on high quality picture.
