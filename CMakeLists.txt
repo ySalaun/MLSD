@@ -1,0 +1,21 @@
+PROJECT(MLSD)
+
+FIND_PACKAGE(OpenCV REQUIRED)
+
+INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS}
+		    ./
+		    DETECTION/)
+		
+SET(LINE_DETECTION	DETECTION/lsd.cpp	DETECTION/lsd.hpp
+			DETECTION/mlsd.cpp	DETECTION/mlsd.hpp
+			DETECTION/detection.cpp DETECTION/detection.hpp)
+	
+# MULTISCALE LSD
+ADD_EXECUTABLE(LSD_MULTISCALE ${LINE_DETECTION}
+		           interface.hpp			interface.cpp
+		           main_detection.cpp)
+
+TARGET_LINK_LIBRARIES(LSD_MULTISCALE ${OpenCV_LIBS})
+
+SET(CMAKE_BUILD_TYPE "Release")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
