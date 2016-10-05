@@ -19,7 +19,7 @@ Building
 
 Requirement:
 
-- CMake (available for free at https://cmake.org/)
+- CMake (available for free at https://cmake.org/download/)
 
 - openCV (available for free at http://opencv.org/) > 2.x
 
@@ -28,10 +28,34 @@ Requirement:
 We are currently trying to get rid of openCV for simplicity though it could be faster with it.
 
 ------------
+Use
+------------
+
+The code works with the following arguments:
+
+- -d: directory path where the line files will be store in [IMG_NAME]_lines.txt and the corresponding pictures in ./pictures/[IMG_NAME]_lines.jpg
+- -i: input file of the form
+
+NB_OF_PICTURES
+
+IMG0_NAME IMG0_FULL_PATH
+
+IMG1_NAME IMG1_FULL_PATH
+
+...
+
+IMGn_NAME IMGn_FULL_PATH
+
+- (optionnally) -m: to enable(1)/disable(0) the multiscale mode (DEFAULT: enabled)
+
+- (optionnally) -t: threshold for segment detection in percentage of the image size (DEFAULT: 0)
+
+------------
 License
 ------------
 
 [MPL2](https://github.com/ySalaun/MLSD/edit/master/LICENSE.mlsd) for MLSD
+
 AGPL for LSD
 
 ------------
