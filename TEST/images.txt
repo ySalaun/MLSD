@@ -1,0 +1,16 @@
+3
+Office TO_BE_FILLED/Office.png
+Grid TO_BE_FILLED/Grid.jpg
+Rabbit TO_BE_FILLED/Rabbit.jpg
+
+#### HOW TO RUN THIS TEST EXAMPLE
+Replace TO_BE_FILLED by the full path of the current directory
+(Optionnaly) Create subfolder pictures for the resulting pictures
+
+#### COMMAND LINE:
+./LSD_MULTISCALE -d TO_BE_FILLED/TEST -i TO_BE_FILLED/TEST/images.txt 
+(Optionnaly -m 1/0 to switch on/off multiscale)
+(Optionnaly -t to change the threshold for segment length)
+
+
+

@@ -34,7 +34,8 @@ Use
 
 The code works with the following arguments:
 
-- -d: directory path where the line files will be store in [IMG_NAME]_lines.txt and the corresponding pictures in ./pictures/[IMG_NAME]_lines.jpg
+- -d: directory path where the line files will be store in [IMG_NAME]_lines.txt and the corresponding pictures in DIRECTORY_PATH/pictures/[IMG_NAME]_lines.jpg
+(Note that you need to make the subdirectory pictures yourself, otherwise it won't store the pictures)
 - -i: input file of the form
 
 NB_OF_PICTURES
