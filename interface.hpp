@@ -61,6 +61,8 @@ struct Segment{
   // I/O METHODS for segments
   void readSegment(std::ifstream &file);
   void saveSegment(std::ofstream &file) const;
+  
+  double qlength();
 };
 
 typedef std::vector<Segment> PictureSegments;

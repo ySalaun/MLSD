@@ -41,7 +41,7 @@ int main(int argc, char* argv[]){
   
   bool consecutive = true;
   bool withDetection = false;
-  double segment_length_threshold = 0.05;
+  double segment_length_threshold = 0;
   bool multiscale = true;
 
   // required
@@ -69,6 +69,7 @@ int main(int argc, char* argv[]){
 
   vector<string> picName, picPath;
   readPictureFile(picList, picName, picPath);
+  const string ext = (multiscale)? "" : "_no_mlsd";
   
   const int nPictures = picName.size();
   // compute descriptors and optionally detect lines
@@ -79,14 +80,14 @@ int main(int argc, char* argv[]){
     vector<Mat> imagePyramid = computeImagePyramid(im, multiscale);
   
     vector<Segment> segments = lsd_multiscale(imagePyramid, segment_length_threshold, multiscale);
-    saveLines(segments, dirPath, picName[i]);
+    saveLines(segments, dirPath, picName[i]+ext);
   }
   cout << "PROCESSED IN " << (clock() - processing_time) / float(CLOCKS_PER_SEC) << endl;
   
   for(int i = 0; i < nPictures; i++){
     Mat im = imread(picPath[i], CV_LOAD_IMAGE_COLOR);
-    vector<Segment> segments = readLines(dirPath, picName[i]);
-    saveLinesPicture(segments, im, dirPath, picName[i], false);
+    vector<Segment> segments = readLines(dirPath, picName[i]+ext);
+    saveLinesPicture(segments, im, dirPath, picName[i]+ext, false);
   }
   
   return 0;

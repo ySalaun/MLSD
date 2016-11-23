@@ -37,6 +37,7 @@ Segment::Segment(const double X1, const double Y1, const double X2, const double
   x1 = X1; y1 = Y1;
   x2 = X2; y2 = Y2;
   width = w;
+  length = sqrt(qlength());
   prec = p;
   log_nfa = nfa;
   angle = atan2(y2 - y1, x2 - x1);
@@ -56,10 +57,18 @@ void Segment::readSegment(std::ifstream &file){
   file >> x1 >> y1 >> x2 >> y2 >> width >> prec >> log_nfa >> scale;
   scale = 0;
   angle = atan2(y2 - y1, x2 - x1);
+  length = sqrt(qlength());
 }
 
 void Segment::saveSegment(std::ofstream &file) const{
   file << x1 << "  " << y1 << "  " << x2 << "  " << y2 << " " << width << " " << prec << " " << log_nfa << " " << scale << std::endl;
+}
+
+double Segment::qlength(){
+  double dX = x1 - x2;
+  double dY = y1 - y2;
+  length = dX*dX + dY*dY;
+  return length;
 }
 
 /*=================== INPUT/OUTPUT ===================*/
