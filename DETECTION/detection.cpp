@@ -184,8 +184,8 @@ vector<Mat> computeImagePyramid(const Mat &imGray, const bool multiscale){
   // generate gaussian pyramid with gray pictures
   for (int i = 0; i < nScales; i++){
     float scale = pow(scale_step, i - nScales + 1);
+    GaussianBlur(imGray, imGray, Size(h_kernel, h_kernel), sigma_scale, sigma_scale);
     resize(imGray, imagePyramid[i], Size(scale*imGray.cols, scale*imGray.rows), scale, scale);
-    GaussianBlur(imagePyramid[i], imagePyramid[i], Size(h_kernel, h_kernel), sigma_scale, sigma_scale);
   }
   
   return imagePyramid;
