@@ -1,3 +1,6 @@
+BEWARE: it seems that the code do not run well on Windows.
+I personnally tested it on Linux Mint (version > 16) 64 bits where it works fine.
+
 =====================================
 MLSD (Multiscale Line Segment Detector)
 =====================================
