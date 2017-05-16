@@ -10,7 +10,7 @@ Introduction
 ------------
 
 
-This code is linked of the following publication, which was subject to peer review: 
+This code is linked of the following publication, which was subject to peer review:
 
 "Multiscale line segment detector for robust and accurate SfM" by Yohann Salaun, Renaud Marlet, and Pascal Monasse ICPR 2016
 
@@ -54,6 +54,15 @@ IMGn_NAME IMGn_FULL_PATH
 - (optionnally) -m: to enable(1)/disable(0) the multiscale mode (DEFAULT: enabled)
 
 - (optionnally) -t: threshold for segment detection in percentage of the image size (DEFAULT: 0)
+
+------------
+Use it in a Docker Container
+------------
+
+A Dockerfile is provided so you can use MLSD on whatever platform as long as you have docker installed.
+
+For instructions on using MLSD inside a docker container, please see ```docker/readme.md```.
+
 
 ------------
 License
